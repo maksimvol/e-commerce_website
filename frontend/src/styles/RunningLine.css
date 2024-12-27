@@ -1,0 +1,40 @@
+.line {
+    position: absolute;
+    top: 60;
+    left: 0;
+    width: 100%;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.running-inner {
+    display: flex;
+  }
+
+.running-line {
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 0;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: runningLine;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes runningLine {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateX(-100%);
+    }
+  }
